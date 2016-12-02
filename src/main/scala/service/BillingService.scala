@@ -6,7 +6,7 @@ object BillingService {
   
   def calculateBill(itemList: List[String]) : Double = {
     val items = Item(itemList)
-    totalBill(items)
+    totalBill(items) - ServiceCharge.calculate(items)
   }
   
   def totalBill(items: List[Item]) : Double = {

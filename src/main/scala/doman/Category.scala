@@ -2,6 +2,14 @@ package domain
 
 trait Category
 
-case object Cold extends Category
+trait Drink extends Category
 
-case object Hot extends Category
+trait Food extends Category
+
+case object ColdDrink extends Drink
+
+case object HotDrink extends Drink
+
+case object ColdFood extends Food
+
+case object HotFood extends Food
